@@ -1,0 +1,64 @@
+body {
+    background-image: url('https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-position: center;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.glass-panel {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.17);
+}
+
+.quicksand {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.quicksand-bold {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+}
+
+.quicksand-semi {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+}
+
+#dorkSelect {
+    color: white; /* Makes dropdown text white */
+    background-color: rgba(55, 65, 81, 0.75);
+}
+
+#dorkSelect option {
+    color: white; /* Makes option text white */
+}
+
+.dork-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 0.25rem;
+    background-color: rgba(55, 65, 81, 0.75);
+    color: white;
+    border-radius: 0.375rem; /* Equivalent to rounded-md */
+}
+
+.dork-list-item .dork-text {
+    flex-grow: 1;
+    margin-right: 0.5rem;
+}
+
+.dork-list-item button {
+    background-color: rgba(220, 20, 60, 0.8);
+    color: white;
+    padding: 0.25rem 0.5rem; /* Equivalent to py-1 px-2 */
+    border-radius: 0.25rem; /* Equivalent to rounded-sm */
+    font-size: 0.875rem;
+}
+
+.dork-list-item button:hover{
+    background-color: rgba(220, 20, 60, 1);
+}

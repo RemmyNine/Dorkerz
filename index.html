@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dorkerz</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-cover bg-center overflow-hidden relative">
+    <canvas id="backgroundCanvas" class="absolute inset-0 -z-10"></canvas>
+    <div class="container mx-auto p-8 relative z-10">
+        <div class="glass-panel p-8 rounded-3xl shadow-2xl w-full max-w-xl mx-auto">
+            <h1 class="text-4xl font-bold text-white mb-8 text-center quicksand-bold">Dorkerz</h1>
+
+            <div class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4 mb-6">
+                <div class="flex-grow">
+                    <input type="text" id="searchInput" class="w-full bg-transparent border border-gray-400 px-4 py-3 rounded-xl text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-blue-400 quicksand" placeholder="Enter your target URL...">
+                </div>
+                <div class="flex space-x-2 items-center">
+                    <select id="engineSelect" class="bg-gray-800 bg-opacity-75 border border-gray-400 px-4 py-3 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-blue-400 quicksand">
+                        <option value="https://www.google.com/search?q=">Google</option>
+                        <option value="https://www.bing.com/search?q=">Bing</option>
+                        <option value="https://duckduckgo.com/?q=">DuckDuckGo</option>
+                        <option value="https://search.yahoo.com/search?q=">Yahoo</option>
+                        <option value="https://yandex.com/search/?text=">Yandex</option>
+                        <option value="https://www.baidu.com/s?wd=">Baidu</option>
+                    </select>
+                   <button id="searchButton" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400 quicksand">
+                       Search
+                   </button>
+                </div>
+            </div>
+
+            <div class="mb-8">
+                <h2 class="text-2xl font-semibold text-white mb-4 quicksand-semi">Popular Dorks</h2>
+                <div class="relative">
+                   <select id="dorkSelect" class="bg-gray-800 bg-opacity-75 border border-gray-400 px-4 py-3 rounded-xl text-white w-full focus:outline-none focus:ring-2 focus:ring-blue-400 quicksand">
+                        <!-- Dork options will be loaded here -->
+                    </select>
+                   <div class="absolute inset-y-0 right-0 flex items-center pointer-events-none pr-3"></div>
+                </div>
+            </div>
+
+           <div class="flex justify-center">
+              <button id="addDorkButton" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-400 quicksand">
+                 Add/Edit Dork
+               </button>
+            </div>
+            <div id="editDorkSection" class="hidden mt-6">
+                <input type="text" id="newDorkInput" class="w-full bg-transparent border border-gray-400 px-4 py-3 rounded-xl text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-blue-400 mb-4 quicksand" placeholder="Enter new dork...">
+                 <div class="flex flex-col space-y-2">
+                    <div class="flex justify-center space-x-4">
+                        <button id="saveDorkButton" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400 quicksand">Save</button>
+                        <button id="cancelDorkButton" class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-3 px-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-400 quicksand">Cancel</button>
+                    </div>
+                     <ul id="dorkList" class="mt-4">
+                       <!-- Dork list will be loaded here -->
+                     </ul>
+                  </div>
+            </div>
+        </div>
+    </div>
+     <script src="script.js"></script>
+</body>
+</html>
