@@ -1,5 +1,6 @@
 # Dorkerz
 # Dork Master
+![image](https://github.com/user-attachments/assets/53679b86-34f2-42b5-ba5f-d1864e7baa92)
 
 A web-based tool for performing advanced searches using dorks across multiple search engines. This tool provides a modern, glassy UI with an animated background and local storage to save your dorks.
 
